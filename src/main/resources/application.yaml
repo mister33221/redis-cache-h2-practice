@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: redis-cache-practice
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: password
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      timeout: 6000
+
+# swagger
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html

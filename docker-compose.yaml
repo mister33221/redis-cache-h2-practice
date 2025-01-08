@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  redis:
+    image: redis:latest  # 使用官方 Redis 鏡像
+    container_name: redis-container
+    ports:
+      - "6379:6379"  # 對映本機 6379 埠
+    command: redis-server --appendonly yes  # 啟用 Redis 持久化
